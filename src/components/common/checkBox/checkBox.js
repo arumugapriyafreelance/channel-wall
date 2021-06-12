@@ -6,18 +6,10 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import Checkbox from "@material-ui/core/Checkbox";
+import './style.css';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex"
-  },
-  formControl: {
-    margin: theme.spacing(3)
-  }
-}));
 
-export default function CheckboxesGroup() {
-  const classes = useStyles();
+export default function CheckboxesGroup(props) {
   const [state, setState] = React.useState({
     gilad: true,
     jason: false,
@@ -32,21 +24,19 @@ export default function CheckboxesGroup() {
   const error = [gilad, jason, antoine].filter(v => v).length !== 2;
 
   return (
-    <div className={classes.root}>
-      <FormControl component="fieldset" className={classes.formControl}>
+    <div className="checkbox-wrapper">
         <FormGroup>
           <FormControlLabel
             control={
               <Checkbox
-                checked={gilad}
-                onChange={handleChange("gilad")}
-                value="gilad"
+                checked={props.value}
+                onChange={handleChange(props.value)}
+                value={props.value}
               />
             }
-            label="Gilad Gray"
+            label={props.label}
           />
         </FormGroup>
-      </FormControl>
     </div>
   );
 }

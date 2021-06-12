@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuItem from "@material-ui/core/MenuItem";
 import TextField from "@material-ui/core/TextField";
+import './style.css';
 
 const currencies = [
   {
@@ -23,25 +24,8 @@ const currencies = [
   }
 ];
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    display: "flex",
-    flexWrap: "wrap"
-  },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1)
-  },
-  dense: {
-    marginTop: theme.spacing(2)
-  },
-  menu: {
-    width: 200
-  }
-}));
-
-export default function OutlinedTextFields() {
-  const classes = useStyles();
+export default function OutlinedTextFields(props) {
+ // const classes = useStyles();
   const [values, setValues] = React.useState({
     name: "Cat in the Hat",
     age: "",
@@ -54,17 +38,15 @@ export default function OutlinedTextFields() {
   };
 
   return (
-    <form className={classes.container} noValidate autoComplete="off">
+    <div className="input-wrapper">
       <TextField
         id="outlined-email-input"
-        label="Email"
-        className={classes.textField}
-        type="email"
-        name="email"
-        autoComplete="email"
-        margin="normal"
+        label={props.label}
+        type={props.type}
+        name={props.name}
+        value={props.value}
         variant="outlined"
       />
-    </form>
+      </div>
   );
 }

@@ -1,0 +1,22 @@
+.input-wrapper .MuiFormControl-root {
+  width: 100%;
+}
+.input-wrapper .MuiFormControl-root .MuiOutlinedInput-input {
+  padding: 14px;
+  font-size: 14px;
+}
+.input-wrapper .MuiFormControl-root .MuiInputLabel-outlined {
+  transform: translate(14px, 16px) scale(1);
+  font-size: 13px;
+}
+.input-wrapper .MuiFormControl-root .MuiInputLabel-outlined.MuiInputLabel-shrink {
+  transform: translate(14px, -6px) scale(0.75);
+  color: #475F7B;
+  font-weight: 600;
+}
+.input-wrapper .MuiFormControl-root .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border: 1px solid #475F7B;
+}
+.input-wrapper .MuiFormControl-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border: 1px solid #475F7B;
+}

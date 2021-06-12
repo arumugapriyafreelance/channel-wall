@@ -1,0 +1,14 @@
+.checkbox-wrapper .MuiFormControlLabel-root {
+  margin: 0;
+}
+.checkbox-wrapper .MuiFormControlLabel-root .MuiButtonBase-root {
+  padding: 0px;
+}
+.checkbox-wrapper .MuiFormControlLabel-root .MuiCheckbox-colorSecondary.Mui-checked {
+  color: #5A8DEE;
+}
+.checkbox-wrapper .MuiFormControlLabel-root .MuiFormControlLabel-label {
+  font-size: 13px;
+  margin-left: 3px;
+  color: #4e4d4d;
+}

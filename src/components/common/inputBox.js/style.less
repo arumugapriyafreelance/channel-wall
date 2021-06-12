@@ -1,0 +1,27 @@
+@import '../../../global.less';
+.input-wrapper{
+    .MuiFormControl-root{
+        width: 100%;
+        .MuiOutlinedInput-input{
+            padding: 14px;
+            font-size: @para;
+        }
+        .MuiInputLabel-outlined{
+            transform: translate(14px, 16px) scale(1);
+            font-size: @medium_size;
+            &.MuiInputLabel-shrink{
+                transform: translate(14px, -6px) scale(0.75);
+                color: @secondary_color;
+                font-weight: 600;
+            }
+        }
+        .MuiOutlinedInput-root.Mui-focused {
+            .MuiOutlinedInput-notchedOutline{
+                border:1px solid @secondary_color;
+            }
+        }
+        .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{
+            border:1px solid @secondary_color;
+        }
+    }
+}

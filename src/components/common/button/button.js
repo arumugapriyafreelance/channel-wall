@@ -1,22 +1,18 @@
 import React, { Component } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import './style.css';
 
-const useStyles = makeStyles(theme => ({
-  button: {
-    margin: theme.spacing(1)
-  },
-  input: {
-    display: "none"
-  }
-}));
 
-export default function ButtonComponent() {
-  const classes = useStyles();
+export default function ButtonComponent(props) {
   return (
-    <div>
-      <Button variant="contained" color="primary" className={classes.button}>
-        Primary
+    <div className="button-wrapper">
+      <Button 
+      variant="contained" 
+      color="primary"
+      type={props.type}
+      className="primary-btn">
+        {props.value}
       </Button>
     </div>
   );
